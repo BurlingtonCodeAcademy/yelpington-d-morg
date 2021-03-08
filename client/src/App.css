@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+/*------------------font and styling imports--------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+
+/*-------------------------------all styles---------------------------*/
+html {
+  background-image: url(https://newengland.com/wp-content/uploads/legacy_media_photos/8840.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgba(207, 207, 207, 0.322);
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*-----------------------Home "page" styles---------*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#nav-bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  float: right;
+  margin-top: 3vh;
+  margin-right: 10vw;
+}
+
+#index-title{
+  font-size: 60px;
+}
+
+#zoom{
+  margin-top: 0;
+}
+
+/*------------Detail "page" styles----------------------*/
+#info-pane {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  display: block;
+  margin-top: 2vh;
+  width: 30vw;
+  margin-left: 7vw;
+}
+
+
+/*-----------------------------------universal styles and classes----------------------------------*/
+.title {
+  font-family: "Pattaya", sans-serif;
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  margin-left: 10vw;
+}
+
+.map-wrap {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(54, 53, 53, 0.452);
+  padding-left: 10vw;
+  padding-top: 2vh;
+}
+
+.linkBox {
+  margin-bottom: 5px;
+  margin-top: 0;
+  border: 1px solid black;
+  background-color: rgba(49, 43, 43, 0.616);
+  height: 40px;
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 10px;
+  border-radius: 5%;
+}
+
+.link{
+  /* color: black; */
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+a{
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+
+
+/*--------------media queries----------*/
+
+@media(width: 120px){
+  #info-pane{
+    width: 10vw;
   }
 }
+
+@media (max-width: 1440px) {
+  .map-wrap{
+    padding-left: 0;
+  }
+  #nav-bar {
+    margin-left: 5vw;
+  }
+  #info-pane{
+    margin-left: 7vw;
+  }
+}
+
+
+
